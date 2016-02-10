@@ -1,5 +1,5 @@
 # Tranpose
-__Transpose__ is an extension for __[VSCode](https://code.visualstudio.com/)__ for transposing swapping selection or characters. It is similar to the *transpose* plugin in __[Sublime Text](https://www.sublimetext.com/)__.
+__Transpose__ is an extension for __[VSCode](https://code.visualstudio.com/)__ for transposing selections or characters. It is similar to the *transpose* plugin in __[Sublime Text](https://www.sublimetext.com/)__.
 
 ![alt text][preview]
 
