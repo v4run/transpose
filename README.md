@@ -11,5 +11,7 @@ Add this to your `keybinding.json` file.
     "command": "extension.transpose"
 }
 ```
+# Source
+[Github](https://github.com/v4run/transpose)
 
 [preview]: https://github.com/v4run/transpose/raw/master/images/preview.gif
