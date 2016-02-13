@@ -2,7 +2,7 @@
 	"name": "transpose",
 	"displayName": "transpose",
 	"description": "Transpose is an extension for VSCode for transposing/swapping selections or characters.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "v4run",
 	"engines": {
 		"vscode": "^0.10.6"
@@ -21,7 +21,7 @@
 		}]
 	},
 	"scripts": {
-		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"vscode:prepublish": "npm install && node ./node_modules/vscode/bin/compile && npm prune --production",
 		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install"
 	},
