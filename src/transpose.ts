@@ -97,29 +97,15 @@ class Transposer {
         this.transposeSelection(selections);
     }
 
-    // replace selection s2 with s1
-    private _replaceSelections(s1: Selection, s2: Selection) {
-        let range;
-        let prevSelection;
-        if (s1.isEmpty) {
-            range = this._textEditor.document.getWordRangeAtPosition(s1.active);
-        } else {
-            range = s1;
-        }
-        if (s2.isEmpty) {
-            prevSelection = this._textEditor.document.getWordRangeAtPosition(s2.active);
-        } else {
-            prevSelection = s2;
-        }
-        this._textEditorEdit.replace(prevSelection, this._textEditor.document.getText(range))
-    }
-
     // Tranposes the selections
     public transposeSelection(selections: Selection[]) {
-        let firstSelection = selections[0];
-        for (let i = 1; i < selections.length; i++) {
-            this._replaceSelections(selections[i], selections[i - 1]);
+        let selectedTexts = selections.map(s => {
+            return this._textEditor.document.getText(s)
+        })
+        // Pops the last elements and inserts it into the beginning of the array
+        selectedTexts.unshift(selectedTexts.pop())
+        for (let i = 0; i < selections.length; i++) {
+            this._textEditorEdit.replace(selections[i], selectedTexts[i])
         }
-        this._replaceSelections(firstSelection, selections[selections.length - 1]);
     }
 }
