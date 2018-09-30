@@ -2,7 +2,7 @@
 	"name": "transpose",
 	"displayName": "transpose",
 	"description": "Transpose is an extension for VSCode for transposing/swapping selections or characters.",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"publisher": "v4run",
 	"engines": {
 		"vscode": "^1.5.0"
