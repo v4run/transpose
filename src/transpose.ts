@@ -71,10 +71,13 @@ class Transposer {
             if (nextPosition == null || prevPosition == null) {
                 return
             }
+            let prevSelection = new Selection(this._prevChar(p), p)
             let nextSelection = new Selection(p, this._nextChar(p))
+
+            let prevChar = this._textEditor.document.getText(prevSelection);
             let nextChar = this._textEditor.document.getText(nextSelection);
-            this._textEditorEdit.delete(nextSelection)
-            this._textEditorEdit.insert(prevPosition, nextChar)
+            this._textEditorEdit.replace(prevSelection, nextChar)
+            this._textEditorEdit.replace(nextSelection, prevChar)
         });
     }
 
