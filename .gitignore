@@ -1,3 +1,4 @@
 out
 node_modules
 vsc-extension-quickstart.md
+*.vsix
