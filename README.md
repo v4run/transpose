@@ -17,4 +17,4 @@ Add this to your `keybinding.json` file.
 # Marketplace
 [Transpose](https://marketplace.visualstudio.com/items?itemName=v4run.transpose)
 
-[preview]: https://github.com/v4run/transpose/raw/master/images/preview.gif
+[preview]: ./images/preview.gif
