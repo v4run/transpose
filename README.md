@@ -3,7 +3,7 @@ __Transpose__ is an extension for __[VSCode](https://code.visualstudio.com/)__ f
 
 ![alt text][preview]
 
-### Adding custom shortcuts
+## Adding custom shortcuts
 Add this to your `keybinding.json` file.
 ```javascript
 {
@@ -11,10 +11,15 @@ Add this to your `keybinding.json` file.
     "command": "extension.transpose"
 }
 ```
-# Source
+
+## Features
+- Swaps characters around the cursor(s) when nothing is selected.
+- Swaps multi-cursor selections (cycles through selections if there are more than two).
+
+## Source
 [Github](https://github.com/v4run/transpose)
 
-# Marketplace
+## Marketplace
 [Transpose](https://marketplace.visualstudio.com/items?itemName=v4run.transpose)
 
 [preview]: https://github.com/v4run/transpose/raw/master/images/preview.gif
